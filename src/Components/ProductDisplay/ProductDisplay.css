@@ -1,139 +1,132 @@
 .productdisplay {
   display: flex;
-  margin: 0px 170px;
+  margin: 0px 170px; /* Margin for larger screens */
 }
 
+/* Flex Container for Product Images */
 .productdisplay-left {
   display: flex;
+  flex-direction: column;
   gap: 17px;
 }
 
+/* Thumbnail Image List */
 .productdisplay-img-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
+/* Thumbnail Images */
 .productdisplay-img-list img {
   height: 163px;
+  object-fit: cover; /* Ensure image covers the area */
 }
 
+/* Main Product Image */
 .productdisplay-main-img {
   width: 586px;
   height: 700px;
+  object-fit: cover; /* Maintain aspect ratio */
 }
 
+/* Right Side Container */
 .productdisplay-right {
-  margin: 0px 70px;
+  margin: 0px 70px; /* Margin for larger screens */
   display: flex;
   flex-direction: column;
 }
 
+/* Product Title */
 .productdisplay-right h1 {
   color: #3d3d3d;
-  font-size: 40px;
+  font-size: 40px; /* Font size for desktop */
   font-weight: 700;
 }
 
+/* Star Ratings */
 .productdisplay-right-stars {
   display: flex;
   align-items: center;
   margin-top: 13px;
   gap: 5px;
   color: #1c1c1c;
-  font-size: 16px;
+  font-size: 16px; /* Font size for desktop */
 }
 
+/* Price Section */
 .productdisplay-right-prices {
   display: flex;
-  margin: 40px 0px;
+  margin: 40px 0px; /* Space above and below prices */
   gap: 30px;
-  font-size: 24px;
+  font-size: 24px; /* Font size for desktop */
   font-weight: 700;
 }
 
+/* Old Price Style */
 .productdisplay-right-price-old {
   color: #818181;
-  text-decoration: line-through;
+  text-decoration: line-through; /* Style for old price */
 }
 
+/* New Price Style */
 .productdisplay-right-price-new {
-  color: #ff4141;
+  color: #ff4141; /* Style for new price */
 }
 
+/* Select Size Heading */
 .productdisplay-right-size h1 {
   margin-top: 55px;
   color: #656565;
-  font-size: 20px;
+  font-size: 20px; /* Size for desktop */
   font-weight: 600;
 }
 
+/* Size Selection */
 .productdisplay-right-sizes {
   display: flex;
   margin: 30px 0px;
-  gap: 20px;
+  gap: 10px; /* Space between size options */
+  flex-wrap: wrap; /* Wrap sizes on smaller screens */
 }
 
+/* Individual Size Box */
 .productdisplay-right-sizes div {
-  padding: 18px 24px;
-  background: #fbfbfb; 
+  padding: 12px 20px; /* Padding for size box */
+  background: #fbfbfb;
   border: 1px solid #ebebeb;
   border-radius: 3px;
   cursor: pointer;
+  transition: background-color 0.3s; /* Transition effect */
 }
 
+/* Add to Cart Button */
 .productdisplay-right button {
-  padding: 20px 40px;
-  width: 200px;
+  padding: 20px;
+  width: 100%; /* Full width button */
   font-size: 16px;
   font-weight: 600;
   color: white;
-  background: #FF4141;
-  margin-bottom: 40px;
+  background: #FF4141; /* Button color */
+  margin-top: 20px; /* Space above button */
   border: none;
   outline: none;
   cursor: pointer;
 }
 
+/* Category Section */
 .productdisplay-right-category {
   margin-top: 10px;
 }
 
+/* Category Highlight */
 .productdisplay-right-category span {
   font-weight: 600;
 }
 
-.size-box {
-  display: inline-block;
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  margin: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.size-box.hovered {
-  background-color: #f0f0f0; /* Background color on hover */
-  color: #333; /* Text color on hover */
-}
-
-.size-box.selected {
-  background-color: #FF4141; /* Selected background color */
-  color: white; /* Selected text color */
-  border: 1px solid #f0f0f0; /* Darker border for selected */
-}
-
-/* Style for the Select Size section */
-.productdisplay-right-size h1 {
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-/* Style for the Size Guide link */
+/* Size Guide Link */
 .size-guide-link {
-  margin-left: 270px;
+  margin-top: 20px; /* Space above link */
   font-size: 16px;
   color: #FF4141;
   text-decoration: underline;
@@ -141,66 +134,65 @@
 }
 
 .size-guide-link:hover {
-  color: #0056b3;
+  color: #0056b3; /* Color change on hover */
 }
 
-/* Overlay for the size guide */
+/* Overlay for Size Guide */
 .size-guide-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* Pop-up container */
+/* Popup for Size Guide */
 .size-guide-popup {
   position: relative;
-  width: 80%;
-  max-width: 500px;
+  width: 90%; /* Responsive width */
+  max-width: 500px; /* Maximum width */
   background: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Close button (cross) */
+/* Close Button for Popup */
 .size-guide-close {
   position: absolute;
   top: 10px;
   right: 15px;
   background: none;
   border: none;
-  font-size: 50px;
+  font-size: 50px; /* Size of close button */
   cursor: pointer;
   color: #333;
 }
 
-/* Size guide image */
+/* Size Guide Image */
 .size-guide-image {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .productdisplay {
-      flex-direction: column;
-      margin: 0px 20px; /* Reduced margin for smaller screens */
+      flex-direction: column; /* Stack items vertically */
+      margin: 0; /* Remove margins for mobile */
   }
 
   .productdisplay-left {
-      align-items: center; /* Center items on smaller screens */
-      gap: 10px;
+      align-items: center; /* Center align images */
   }
 
   .productdisplay-main-img {
-      width: 100%; /* Make the main image responsive */
+      width: 100%; /* Full width image */
       height: auto; /* Maintain aspect ratio */
   }
 
@@ -209,37 +201,52 @@
   }
 
   .productdisplay-right h1 {
-      font-size: 30px; /* Smaller heading on mobile */
+      font-size: 30px; /* Smaller title */
+  }
+
+  .productdisplay-right-stars {
+      font-size: 14px; /* Smaller star rating */
   }
 
   .productdisplay-right-prices {
-      flex-direction: column; /* Stack prices vertically */
-      align-items: flex-start; /* Align prices to start */
-      gap: 10px; /* Adjust gap */
+      flex-direction: column; /* Stack prices */
+      align-items: flex-start; /* Align to start */
+      gap: 10px; /* Space between prices */
   }
 
   .productdisplay-right-size h1 {
-      font-size: 18px; /* Smaller font for size selection */
+      font-size: 18px; /* Smaller size heading */
+  }
+
+  .productdisplay-right-sizes {
+      flex-direction: row; /* Row layout */
+      justify-content: center; /* Center sizes */
+      margin: 10px 0; /* Space around sizes */
+  }
+
+  .productdisplay-right-sizes div {
+      flex: 1; /* Equal flex for size boxes */
+      min-width: 60px; /* Minimum width for size boxes */
   }
 
   .productdisplay-right button {
-      width: 100%; /* Full width button on mobile */
-      margin-bottom: 20px; /* Reduced margin */
+      width: 100%; /* Full-width button */
+      margin-bottom: 20px; /* Space below button */
   }
 
   .size-guide-link {
-      margin-left: 0; /* Reset margin for mobile */
-      font-size: 14px; /* Smaller font size */
+      margin-left: 0; /* Reset margin */
+      font-size: 14px; /* Smaller link font size */
   }
 }
 
 @media (max-width: 480px) {
   .productdisplay-right h1 {
-      font-size: 24px; /* Further reduce font size for very small devices */
+      font-size: 24px; /* Smaller heading */
   }
 
   .productdisplay-right-stars {
-      font-size: 14px; /* Smaller star rating text */
+      font-size: 12px; /* Smaller star rating */
   }
 
   .productdisplay-right-prices {
