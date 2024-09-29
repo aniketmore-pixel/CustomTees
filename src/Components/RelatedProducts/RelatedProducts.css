@@ -24,3 +24,26 @@
     display: flex;
     gap: 30px;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .relatedproducts h1 {
+        font-size: 36px; /* Adjust heading size for smaller screens */
+    }
+
+    .relatedproducts-item {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center align items */
+        gap: 20px; /* Adjust gap between items */
+    }
+}
+
+@media (max-width: 480px) {
+    .relatedproducts h1 {
+        font-size: 28px; /* Further reduce heading size on very small screens */
+    }
+
+    .relatedproducts-item {
+        gap: 15px; /* Further reduce gap between items */
+    }
+}
