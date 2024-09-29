@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 90vh;
+    /* height: 90vh; Remove this line */
 }
 
 .relatedproducts h1 {
@@ -28,22 +28,22 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
     .relatedproducts h1 {
-        font-size: 36px; /* Adjust heading size for smaller screens */
+        font-size: 36px;
     }
 
     .relatedproducts-item {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: center; /* Center align items */
-        gap: 20px; /* Adjust gap between items */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 }
 
 @media (max-width: 480px) {
     .relatedproducts h1 {
-        font-size: 28px; /* Further reduce heading size on very small screens */
+        font-size: 28px;
     }
 
     .relatedproducts-item {
-        gap: 15px; /* Further reduce gap between items */
+        gap: 15px;
     }
 }

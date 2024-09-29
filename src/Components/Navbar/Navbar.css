@@ -5,7 +5,6 @@
   box-shadow: 0 1px 3px -2px black;
 }
 
-/* Adjust logo and title size for mobile */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -14,65 +13,110 @@
 
 .nav-logo p {
   font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
   color: #171717;
   font-size: 49px;
   font-weight: 600;
 }
 
-/* New styles for smaller screens */
-@media (max-width: 768px) {
-  .nav-logo p {
-    font-size: 36px; /* Smaller font size */
-  }
-
-  .nav-menu {
-    display: none; /* Hide the menu by default */
-    flex-direction: column; /* Stack items vertically */
-    position: absolute; /* Position it absolutely */
-    top: 80px; /* Adjust as needed */
-    left: 0;
-    background-color: white; /* Set background color */
-    width: 100%; /* Full width */
-    z-index: 100; /* Bring it to front */
-  }
-
-  .nav-menu.active {
-    display: flex; /* Show menu when active */
-  }
-
-  .nav-menu li {
-    align-items: flex-start; /* Align items to start */
-    gap: 10px; /* Smaller gap */
-  }
-
-  .nav-login-cart {
-    flex-direction: column; /* Stack login and cart vertically */
-    align-items: center; /* Center items */
-    gap: 10px; /* Smaller gap */
-  }
-
-  .nav-login-cart button {
-    width: 100%; /* Full width for button */
-  }
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  color: #626262;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-/* Hamburger menu styles */
-.hamburger {
-  display: none; /* Hidden by default */
+.nav-menu li {
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
   cursor: pointer;
 }
 
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #626262;
-  margin: 4px 0;
+#baccha {
+  color: #626262;
 }
 
-/* Show hamburger menu on small screens */
+.nav-menu hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background: #ff4141;
+}
+
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.nav-login-cart button {
+  width: 157px;
+  height: 58px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 75px;
+  color: #515151;
+  font-size: 20px;
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+}
+
+.nav-login-cart button:active {
+  background: #f3f3f3;
+}
+
+.nav-cart-count {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -35px;
+  margin-left: -55px;
+  border-radius: 11px;
+  font-size: 14px;
+  background: red;
+  color: white;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex; /* Show hamburger on smaller screens */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-menu li {
+    gap: 5px;
+  }
+
+  .nav-login-cart {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-login-cart button {
+    width: 100%;
+    max-width: 200px; /* Adjust as needed */
+  }
+
+  .nav-cart-count {
+    margin-top: -25px; /* Adjust for better alignment */
+    margin-left: -25px; /* Adjust for better alignment */
   }
 }
