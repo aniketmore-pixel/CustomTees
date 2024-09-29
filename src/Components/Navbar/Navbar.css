@@ -21,7 +21,7 @@
 
 .nav-logo img {
   height: 40px; /* Adjust the size of the logo */
-} 
+}
 
 .nav-logo p {
   font-family: "Caveat", cursive;
@@ -46,10 +46,10 @@
 
 /* Hamburger menu styles */
 .hamburger {
-  display: none; /* Hide by default */
+  display: flex; /* Show hamburger icon */
   flex-direction: column;
   cursor: pointer;
-  margin-top: 10px; /* Add spacing above hamburger menu */
+  margin-left: 20px; /* Space between login/cart buttons and hamburger */
 }
 
 .line {
@@ -59,21 +59,8 @@
   margin: 4px 0;
 }
 
-/* Navigation menu styles */
-.nav-menu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  gap: 50px;
-  color: #626262;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-/* Mobile styles */
-.nav-menu.open {
-  display: flex; /* Show menu when open */
-  flex-direction: column;
+/* Mobile menu styles */
+.mobile-menu {
   position: absolute;
   top: 70px; /* Adjust based on your navbar height */
   left: 0;
@@ -84,47 +71,49 @@
   z-index: 10; /* To be above other content */
 }
 
-.nav-menu li {
-  flex-direction: row; /* Keep items in a row */
-  align-items: center; /* Align items */
-  justify-content: center; /* Center items */
-  gap: 3px;
+/* Close button styles */
+.close-button {
+  background: none;
+  border: none;
+  font-size: 30px; /* Size of close button */
+  color: #626262; /* Color of close button */
   cursor: pointer;
+  margin-bottom: 10px; /* Spacing below close button */
+}
+
+/* Navigation menu styles */
+.nav-menu {
+  display: flex;
+  flex-direction: column; /* Stack menu items vertically */
+  list-style: none;
+  padding: 0; /* Remove padding */
+}
+
+.nav-menu li {
+  margin: 10px 0; /* Space between menu items */
 }
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .nav-menu {
-    display: none; /* Hide nav-menu by default on mobile */
-  }
-
-  .hamburger {
-    display: flex; /* Show hamburger icon */
+      display: none; /* Hide nav-menu by default on mobile */
   }
 
   .nav-menu.open {
-    display: flex; /* Show nav-menu when hamburger is clicked */
+      display: flex; /* Show nav-menu when hamburger is clicked */
   }
 
   .nav-menu li {
-    gap: 10px; /* Reduced gap on mobile */
-    font-size: 18px; /* Slightly smaller font size on mobile */
+      gap: 10px; /* Reduced gap on mobile */
+      font-size: 18px; /* Slightly smaller font size on mobile */
   }
 
   .nav-login-cart {
-    gap: 20px; /* Reduced gap between login/cart on mobile */
+      gap: 20px; /* Reduced gap between login/cart on mobile */
   }
 }
 
 /* Rest of the original styles */
-.nav-menu hr {
-  border: none;
-  width: 80%;
-  height: 3px;
-  border-radius: 10px;
-  background: #ff4141;
-}
-
 .nav-cart-count {
   width: 22px;
   height: 22px;
