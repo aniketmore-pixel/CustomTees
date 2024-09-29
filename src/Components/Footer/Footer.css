@@ -62,10 +62,57 @@
 }
 
 .footer-logo p {
-  font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
-  font-style: normal;
-  color: #171717;
-  font-size: 49px;
-  font-weight: 600;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #171717;
+    font-size: 49px;
+    font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        gap: 30px;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        font-size: 18px;
+    }
+
+    .footer-social-icon {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer-icons-container {
+        padding: 8px;
+    }
+
+    .footer-copyright {
+        font-size: 18px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo p {
+        font-size: 36px; /* Adjust font size for smaller screens */
+    }
+
+    .footer-links {
+        font-size: 16px; /* Smaller font size for links */
+    }
+
+    .footer-copyright {
+        font-size: 16px; /* Smaller copyright text */
+    }
 }
