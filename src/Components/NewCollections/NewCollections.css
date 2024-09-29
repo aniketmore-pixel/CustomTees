@@ -21,7 +21,35 @@
 
 .collections {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
     margin-top: 50px;
     gap: 30px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .collections {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium devices */
+    }
+}
+
+@media (max-width: 900px) {
+    .collections {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller devices */
+    }
+}
+
+@media (max-width: 600px) {
+    .collections {
+        grid-template-columns: 1fr; /* 1 column for mobile devices */
+        margin-top: 30px; /* Reduce margin on smaller screens */
+    }
+
+    .new-collections h1 {
+        font-size: 30px; /* Reduce font size for smaller screens */
+    }
+
+    .new-collections hr {
+        width: 150px; /* Adjust hr width for smaller screens */
+    }
 }

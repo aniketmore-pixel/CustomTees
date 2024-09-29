@@ -1,7 +1,10 @@
 .hero {
-    height: 100vh;
+    min-height: 100vh; /* Use min-height for flexibility */
     background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
     display: flex;
+    width: 100%; /* Ensure full width */
+    padding: 0 20px; /* Add horizontal padding for smaller screens */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .hero-left {
@@ -10,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    padding-left: 180px;
+    padding-left: 180px; /* Keep this for larger screens */
     line-height: 1.1;
 }
 
@@ -41,7 +44,7 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 310px;
+    width: 310px; /* Keep this for larger screens */
     height: 70px;
     border-radius: 75px;
     margin-top: 30px;
@@ -56,4 +59,111 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero-left {
+        padding-left: 50px; /* Reduced padding for smaller devices */
+    }
+
+    .hero-left h2 {
+        font-size: 22px; /* Adjusted font size */
+    }
+
+    .hero-left p {
+        font-size: 80px; /* Adjusted font size */
+    }
+
+    .hero-hand-icon img {
+        width: 80px; /* Adjusted image size */
+    }
+
+    .hero-latest-btn {
+        width: 100%; /* Full width button */
+        font-size: 18px; /* Adjusted font size */
+        height: 60px; /* Adjusted height */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stack elements vertically */
+        min-height: 100vh; /* Ensure the hero still takes full height */
+    }
+
+    .hero-left {
+        padding-left: 0; /* Remove padding for better centering */
+        padding-right: 0; /* Remove right padding for better centering */
+        align-items: center; /* Center align items */
+        text-align: center; /* Center text */
+    }
+
+    .hero-left h2 {
+        font-size: 20px; /* Further adjusted font size */
+    }
+
+    .hero-left p {
+        font-size: 60px; /* Further adjusted font size */
+    }
+
+    .hero-hand-icon {
+        flex-direction: column; /* Stack hand icon and text */
+        align-items: center; /* Center align items */
+        justify-content: center; /* Center vertically */
+    }
+
+    .hero-hand-icon img {
+        margin: 0 auto; /* Center the image */
+    }
+
+    .hero-latest-btn {
+        width: 90%; /* Slightly reduce width */
+        font-size: 16px; /* Further adjusted font size */
+        height: 50px; /* Adjusted height */
+    }
+
+    .hero-right {
+        width: 100%; /* Ensure the right side takes full width */
+        justify-content: center; /* Center the hero image */
+    }
+
+    .hero-right img {
+        width: 100%; /* Make hero image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 0; /* Remove horizontal padding for small devices */
+        height: auto; /* Let the height adjust to the content */
+    }
+
+    .hero-left h2 {
+        font-size: 18px; /* Smaller font size for small devices */
+    }
+
+    .hero-left p {
+        font-size: 50px; /* Smaller font size for small devices */
+    }
+
+    .hero-hand-icon img {
+        width: 60px; /* Smaller hand icon */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .hero-latest-btn {
+        font-size: 14px; /* Smaller button text */
+        height: 45px; /* Adjusted height */
+    }
+
+    .hero-right {
+        justify-content: center; /* Center the hero image */
+    }
+
+    .hero-right img {
+        width: 100%; /* Make hero image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
 }

@@ -3,24 +3,60 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 90vh;
+    height: auto; /* Change to auto to adapt to content height */
+    padding: 20px; /* Add some padding for better spacing */
 }
 
 .popular h1 {
     color: #171717;
-    font-size: 50px;
+    font-size: 50px; /* Base font size */
     font-weight: 600;
+    text-align: center; /* Center the title */
 }
 
 .popular hr {
-    width: 200px;
-    height: 6px;
-    border-radius: 10px;
+    width: 200px; /* Set a fixed width */
+    height: 6px; /* Height of the line */
+    border-radius: 10px; /* Rounded edges */
     background: #252525;
+    margin: 10px auto; /* Center the line with margin */
 }
 
 .popular-item {
-    margin-top: 50px;
+    margin-top: 50px; /* Space above the item list */
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 30px; /* Space between items */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .popular h1 {
+        font-size: 40px; /* Adjust font size for tablets */
+    }
+
+    .popular-item {
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .popular h1 {
+        font-size: 35px; /* Further reduce font size for smaller devices */
+    }
+
+    .popular-item {
+        gap: 15px; /* Further reduce gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .popular h1 {
+        font-size: 28px; /* Smaller title for mobile */
+    }
+
+    .popular-item {
+        gap: 10px; /* Minimal gap for small screens */
+    }
 }

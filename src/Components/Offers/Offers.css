@@ -8,6 +8,7 @@
     background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
 }
 
+/* Desktop Styles */
 .offers-left {
     flex: 1;
     display: flex;
@@ -46,4 +47,43 @@
     align-items: center;
     justify-content: flex-end;
     padding-top: 50px;  
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .offers {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px; /* Add some padding */
+        flex-direction: column; /* Stack the children vertically */
+    }
+
+    .offers-left {
+        align-items: center; /* Center align items */
+        text-align: center; /* Center text */
+    }
+
+    .offers-left h1 {
+        font-size: 40px; /* Adjust font size */
+    }
+
+    .offers-left p {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .offers-left button {
+        width: 100%; /* Make button full width */
+        height: 60px; /* Adjust button height */
+        font-size: 18px; /* Adjust button font size */
+    }
+
+    .offers-right {
+        justify-content: center; /* Center align the image */
+        padding-top: 20px; /* Reduce top padding */
+    }
+
+    .offers-right img {
+        width: 80%; /* Adjust image size */
+        height: auto; /* Maintain aspect ratio */
+    }
 }

@@ -53,3 +53,64 @@
     font-size: 16px;
     cursor: pointer;
 }
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .newsletter {
+        width: 80%; /* Adjust width for medium devices */
+        padding: 0 60px; /* Reduce padding */
+    }
+
+    .newsletter div {
+        width: 100%; /* Make the input/button container full width */
+    }
+}
+
+@media (max-width: 900px) {
+    .newsletter {
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .newsletter h1 {
+        font-size: 45px; /* Reduce heading font size */
+    }
+
+    .newsletter p {
+        font-size: 18px; /* Reduce paragraph font size */
+    }
+
+    .newsletter input {
+        width: 70%; /* Adjust input width */
+        margin-left: 15px; /* Adjust margin */
+    }
+
+    .newsletter div button {
+        width: 30%; /* Adjust button width */
+    }
+}
+
+@media (max-width: 600px) {
+    .newsletter h1 {
+        font-size: 35px; /* Further reduce heading font size */
+    }
+
+    .newsletter p {
+        font-size: 16px; /* Further reduce paragraph font size */
+    }
+
+    .newsletter div {
+        flex-direction: column; /* Stack input and button vertically */
+        align-items: stretch; /* Make elements full width */
+    }
+
+    .newsletter input {
+        width: 100%; /* Full width for mobile */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px; /* Add margin between input and button */
+    }
+
+    .newsletter div button {
+        width: 100%; /* Full width for button on mobile */
+        height: 50px; /* Adjust button height */
+    }
+}
