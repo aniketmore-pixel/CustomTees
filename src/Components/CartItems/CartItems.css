@@ -107,3 +107,48 @@
     color: white;
     cursor: pointer;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .cartitems {
+        margin: 50px 20px; /* Reduce margins */
+    }
+
+    .cartitems-format-main {
+        grid-template-columns: 1fr; /* Stack columns */
+        gap: 30px; /* Reduce gap */
+    }
+
+    .cartitems-format {
+        flex-direction: column; /* Stack items */
+        align-items: center; /* Center align */
+    }
+
+    .cartitems-down {
+        flex-direction: column; /* Stack totals and promo code */
+        margin: 50px 0; /* Reduce margin */
+    }
+
+    .cartitems-total {
+        margin-right: 0; /* Remove right margin */
+        width: 100%; /* Full width */
+    }
+
+    .cartitems-promobox {
+        width: 100%; /* Full width */
+        padding-left: 10px; /* Adjust padding */
+    }
+    
+    .cartitems-promobox input {
+        width: 70%; /* Adjust input width */
+    }
+
+    .cartitems-promobox button {
+        width: 100%; /* Full width */
+        margin-top: 10px; /* Space between input and button */
+    }
+
+    .cartitems-total button {
+        width: 100%; /* Full width */
+    }
+}

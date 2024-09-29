@@ -30,3 +30,34 @@
     padding: 48px;
     padding-bottom: 70px;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .descriptionbox {
+        margin: 60px 20px; /* Adjust margins for smaller screens */
+    }
+
+    .descriptionbox-navigator {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    .descriptionbox-nav-box {
+        width: 100%; /* Make navigation boxes full width */
+        height: auto; /* Adjust height for better spacing */
+        margin-bottom: 10px; /* Add space between navigation items */
+    }
+
+    .descriptionbox-description {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .descriptionbox-nav-box {
+        font-size: 14px; /* Adjust font size for very small screens */
+    }
+
+    .descriptionbox-description {
+        gap: 15px; /* Reduce gap between paragraphs */
+    }
+}
