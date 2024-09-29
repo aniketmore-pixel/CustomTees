@@ -8,7 +8,7 @@ import { ShopContext } from '../../Context/ShopContext';
 const Navbar = () => {
     const [menu, setMenu] = useState("shop");
     const { getTotalCartItems } = useContext(ShopContext); 
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State to toggle mobile menu
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const handleMenuToggle = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -16,9 +16,16 @@ const Navbar = () => {
 
     return (
         <div className='navbar'>
-            <div className="nav-logo">
-                <img src={logo} alt="" />
-                <p>CustomTees</p>
+            <div className="nav-header">
+                <div className="nav-logo">
+                    <img src={logo} alt="CustomTees Logo" />
+                    <p>CustomTees</p>
+                </div>
+                <div className="nav-login-cart">
+                    <Link to='/login'><button>Login</button></Link>
+                    <Link to='/cart'><img src={cart_icon} alt="Cart" /></Link>
+                    <div className="nav-cart-count">{getTotalCartItems()}</div>
+                </div>
             </div>
             <div className="hamburger" onClick={handleMenuToggle}>
                 <span className="line"></span>
@@ -43,11 +50,6 @@ const Navbar = () => {
                     {menu === "kids" ? <hr /> : <></>}
                 </li>
             </ul>
-            <div className="nav-login-cart">
-                <Link to='/login'><button>Login</button></Link>
-                <Link to='/cart'><img src={cart_icon} alt="" /></Link>
-                <div className="nav-cart-count">{getTotalCartItems()}</div>
-            </div>
         </div>
     );
 };

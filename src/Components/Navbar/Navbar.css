@@ -1,8 +1,15 @@
 .navbar {
   display: flex;
-  justify-content: space-between; /* Changed for better spacing */
+  flex-direction: column; /* Stack elements vertically */
   padding: 16px;
   box-shadow: 0 1px 3px -2px black;
+}
+
+/* Header styles */
+.nav-header {
+  display: flex;
+  justify-content: space-between; /* Space out logo/title and buttons */
+  align-items: center; /* Center items vertically */
 }
 
 /* Logo styles */
@@ -12,13 +19,44 @@
   gap: 10px;
 }
 
+.nav-logo img {
+  height: 40px; /* Adjust the size of the logo */
+} 
+
 .nav-logo p {
   font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
   font-style: normal;
   color: #171717;
-  font-size: 49px;
+  font-size: 36px; /* Reduced font size */
   font-weight: 600;
+}
+
+/* Login and Cart styles */
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Adjust gap between buttons */
+}
+
+/* Adjust button styles */
+.nav-login-cart button {
+  width: 130px; /* Adjust button width if needed */
+  height: 40px; /* Adjust button height */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  cursor: pointer;
+  margin-top: 10px; /* Add spacing above hamburger menu */
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background: #626262;
+  margin: 4px 0;
 }
 
 /* Navigation menu styles */
@@ -33,20 +71,6 @@
 }
 
 /* Mobile styles */
-.hamburger {
-  display: none; /* Hide by default */
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.line {
-  width: 25px;
-  height: 3px;
-  background: #626262;
-  margin: 4px 0;
-}
-
-/* Adjust styles for the nav-menu in mobile */
 .nav-menu.open {
   display: flex; /* Show menu when open */
   flex-direction: column;
@@ -99,29 +123,6 @@
   height: 3px;
   border-radius: 10px;
   background: #ff4141;
-}
-
-.nav-login-cart {
-  display: flex;
-  align-items: center;
-  gap: 45px;
-}
-
-.nav-login-cart button {
-  width: 157px;
-  height: 58px;
-  outline: none;
-  border: 1px solid #7a7a7a;
-  border-radius: 75px;
-  color: #515151;
-  font-size: 20px;
-  font-weight: 500;
-  background: white;
-  cursor: pointer;
-}
-
-.nav-login-cart button:active {
-  background: #f3f3f3;
 }
 
 .nav-cart-count {
