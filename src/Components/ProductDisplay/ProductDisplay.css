@@ -122,4 +122,73 @@
     color: white; /* Selected text color */
     border: 1px solid #f0f0f0; /* Darker border for selected */
   }
+
+
+
+
+
+
+/* Style for the Select Size section */
+.productdisplay-right-size h1 {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the Size Guide link */
+  .size-guide-link {
+    margin-left: 270px;
+    font-size: 16px;
+    color: #FF4141;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .size-guide-link:hover {
+    color: #0056b3;
+  }
+  
+  /* Overlay for the size guide */
+  .size-guide-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Pop-up container */
+  .size-guide-popup {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Close button (cross) */
+  .size-guide-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Size guide image */
+  .size-guide-image {
+    width: 100%;
+    height: auto;
+  }
   
