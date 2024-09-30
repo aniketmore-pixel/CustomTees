@@ -48,34 +48,35 @@ const SubmitDesign = () => {
     }
   };
 
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation regex
+    return re.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Validate fields
+
+    // Validations
     if (!image || !title || !name || !email || !phone) {
       setToastMessage('Please fill in all fields and upload a design.');
-      setTimeout(() => setToastMessage(''), 3000); // Clear toast after 3 seconds
+      setTimeout(() => setToastMessage(''), 3000);
       return;
     }
 
-    // Validate email format
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
+    if (!validateEmail(email)) {
       setToastMessage('Please enter a valid email address.');
       setTimeout(() => setToastMessage(''), 3000);
       return;
     }
 
-    // Validate phone number length
     if (phone.length !== 10) {
-      setToastMessage('Phone number must be 10 digits long.');
+      setToastMessage('Phone number must be exactly 10 digits.');
       setTimeout(() => setToastMessage(''), 3000);
       return;
     }
 
-    // Validate margin
-    if (margin > 40) {
-      setToastMessage('Margin cannot exceed $40.');
+    if (margin < 0 || margin > 40) {
+      setToastMessage('Margin must be between $0 and $40.');
       setTimeout(() => setToastMessage(''), 3000);
       return;
     }
@@ -96,7 +97,7 @@ const SubmitDesign = () => {
 
       if (response.ok) {
         const result = await response.json();
-        setToastMessage('Design submitted successfully!'); // Success message
+        setToastMessage('Design submitted successfully!');
 
         // Reset form fields after successful submission
         setTitle('');
@@ -107,12 +108,11 @@ const SubmitDesign = () => {
         setPhone('');
         setMargin(0);
       } else {
-        throw new Error('Failed to submit design. Please try again.'); // More descriptive error
+        throw new Error('Failed to submit design. Please try again.');
       }
     } catch (error) {
-      setToastMessage(error.message || 'An error occurred.'); // Use the error message
+      setToastMessage(error.message || 'An error occurred.');
     } finally {
-      // Clear toast after 3 seconds
       setTimeout(() => setToastMessage(''), 3000);
     }
   };
