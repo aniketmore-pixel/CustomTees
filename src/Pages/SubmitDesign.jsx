@@ -68,7 +68,7 @@ const SubmitDesign = () => {
     formData.append('margin', margin);
 
     try {
-      const response = await fetch('http://customtees.onrender.com/submit-design', {
+      const response = await fetch('https://customtees.onrender.com/submit-design', {
         method: 'POST',
         body: formData,
       });
