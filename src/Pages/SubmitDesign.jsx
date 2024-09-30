@@ -52,13 +52,10 @@ const SubmitDesign = () => {
     e.preventDefault();
     if (!image || !title || !name || !email || !phone) {
       setToastMessage('Please fill in all fields and upload a design.');
-      // Clear toast after 3 seconds
-      setTimeout(() => {
-        setToastMessage('');
-      }, 3000);
+      setTimeout(() => setToastMessage(''), 3000); // Clear toast after 3 seconds
       return;
     }
-
+  
     const formData = new FormData();
     formData.append('title', title);
     formData.append('design', image);
@@ -66,16 +63,17 @@ const SubmitDesign = () => {
     formData.append('email', email);
     formData.append('phone', phone);
     formData.append('margin', margin);
-
+  
     try {
       const response = await fetch('https://customtees.onrender.com/submit-design', {
         method: 'POST',
         body: formData,
       });
-
+  
       if (response.ok) {
         const result = await response.json();
         setToastMessage('Design submitted successfully!'); // Success message
+  
         // Reset form fields after successful submission
         setTitle('');
         setImage(null);
@@ -84,22 +82,17 @@ const SubmitDesign = () => {
         setEmail('');
         setPhone('');
         setMargin(0);
-
-        // Clear toast after 3 seconds
-        setTimeout(() => {
-          setToastMessage('');
-        }, 3000);
       } else {
-        throw new Error('Design submitted successfully!');
+        throw new Error('Failed to submit design. Please try again.'); // More descriptive error
       }
     } catch (error) {
-      setToastMessage('Design submitted successfully!'); // Error message
+      setToastMessage(error.message || 'An error occurred.'); // Use the error message
+    } finally {
       // Clear toast after 3 seconds
-      setTimeout(() => {
-        setToastMessage('');
-      }, 3000);
+      setTimeout(() => setToastMessage(''), 3000);
     }
   };
+  
 
   return (
     <div className='submit-design-container'>
