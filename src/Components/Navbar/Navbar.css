@@ -1,16 +1,8 @@
 .navbar {
   display: flex;
-  flex-direction: column; /* Change to column for mobile */
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 16px;
   box-shadow: 0 1px 3px -2px black;
-}
-
-.nav-header {
-  display: flex;
-  justify-content: space-between; /* Space between logo and hamburger */
-  align-items: center;
-  width: 100%;
 }
 
 .nav-logo {
@@ -26,31 +18,6 @@
   color: #171717;
   font-size: 49px;
   font-weight: 600;
-}
-
-.hamburger {
-  display: none; /* Hide by default for desktop */
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.line {
-  width: 30px;
-  height: 3px;
-  background: #626262;
-  margin: 2px 0;
-  transition: all 0.3s ease;
-}
-
-.line.active {
-  background: #ff4141; /* Change color when active */
-}
-
-.mobile-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Space between menu items */
-  padding: 10px 0;
 }
 
 .nav-menu {
@@ -119,29 +86,4 @@
   font-size: 14px;
   background: red;
   color: white;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column; /* Keep as column for mobile */
-  }
-
-  .hamburger {
-    display: flex; /* Show hamburger on mobile */
-  }
-
-  .nav-menu {
-    flex-direction: column; /* Stack menu items vertically */
-    align-items: flex-start; /* Align menu items to the left */
-  }
-
-  .nav-login-cart.desktop {
-    display: none; /* Hide desktop login/cart on mobile */
-  }
-
-  .nav-login-cart {
-    flex-direction: column; /* Stack login/cart vertically */
-    gap: 10px; /* Space between login and cart */
-  }
-}
+}  
