@@ -1,7 +1,6 @@
 const express = require('express');
 const multer = require('multer');
 const { createClient } = require('@supabase/supabase-js');
-const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -35,7 +34,8 @@ app.post('/submit-design', upload.single('design'), async (req, res) => {
       });
 
     if (error) {
-      throw new Error(error.message);
+      console.error('Error uploading to Supabase:', error); // Log full error for debugging
+      return res.status(500).json({ message: error.message });
     }
 
     // Prepare the user data to log or return
@@ -45,16 +45,16 @@ app.post('/submit-design', upload.single('design'), async (req, res) => {
       email,
       phone,
       margin,
-      designFile: data.Key, // Save the file key from Supabase
+      designFile: data.path, // Save the file path from Supabase
     };
 
     // Optionally, log user data or save it to a database
     console.log('User data saved successfully:', userData);
 
     // Send a response back to the client
-    res.json({ message: 'Design and user data submitted successfully!', designFile: data });
+    res.json({ message: 'Design and user data submitted successfully!', designFile: userData });
   } catch (err) {
-    console.error('Error uploading file to Supabase:', err);
+    console.error('Error handling the upload:', err);
     res.status(500).json({ message: 'Error saving user data.' });
   }
 });
