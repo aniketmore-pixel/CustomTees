@@ -50,12 +50,36 @@ const SubmitDesign = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Validate fields
     if (!image || !title || !name || !email || !phone) {
       setToastMessage('Please fill in all fields and upload a design.');
       setTimeout(() => setToastMessage(''), 3000); // Clear toast after 3 seconds
       return;
     }
-  
+
+    // Validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      setToastMessage('Please enter a valid email address.');
+      setTimeout(() => setToastMessage(''), 3000);
+      return;
+    }
+
+    // Validate phone number length
+    if (phone.length !== 10) {
+      setToastMessage('Phone number must be 10 digits long.');
+      setTimeout(() => setToastMessage(''), 3000);
+      return;
+    }
+
+    // Validate margin
+    if (margin > 40) {
+      setToastMessage('Margin cannot exceed $40.');
+      setTimeout(() => setToastMessage(''), 3000);
+      return;
+    }
+
     const formData = new FormData();
     formData.append('title', title);
     formData.append('design', image);
@@ -63,17 +87,17 @@ const SubmitDesign = () => {
     formData.append('email', email);
     formData.append('phone', phone);
     formData.append('margin', margin);
-  
+
     try {
       const response = await fetch('https://customtees.onrender.com/submit-design', {
         method: 'POST',
         body: formData,
       });
-  
+
       if (response.ok) {
         const result = await response.json();
         setToastMessage('Design submitted successfully!'); // Success message
-  
+
         // Reset form fields after successful submission
         setTitle('');
         setImage(null);
@@ -92,7 +116,6 @@ const SubmitDesign = () => {
       setTimeout(() => setToastMessage(''), 3000);
     }
   };
-  
 
   return (
     <div className='submit-design-container'>
