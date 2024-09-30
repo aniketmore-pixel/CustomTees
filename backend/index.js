@@ -1,6 +1,7 @@
 const express = require('express');
 const multer = require('multer');
 const { createClient } = require('@supabase/supabase-js');
+require('dotenv').config(); // Load environment variables
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -13,6 +14,9 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 // Set up multer for file uploads (keeping it in memory)
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
+
+// Middleware to parse JSON bodies
+app.use(express.json());
 
 // Define the route for submitting design
 app.post('/submit-design', upload.single('design'), async (req, res) => {
@@ -27,14 +31,14 @@ app.post('/submit-design', upload.single('design'), async (req, res) => {
   try {
     // Upload file to Supabase Storage
     const { data, error } = await supabase.storage
-      .from('uploads') // Replace 'uploads' with your bucket name
+      .from('uploads') // Use the correct bucket name
       .upload(`${Date.now()}_${designFile.originalname}`, designFile.buffer, {
         contentType: designFile.mimetype,
-        upsert: true,
+        upsert: true, // Overwrite if file already exists
       });
 
     if (error) {
-      console.error('Error uploading to Supabase:', error); // Log full error for debugging
+      console.error('Error uploading to Supabase:', error);
       return res.status(500).json({ message: error.message });
     }
 
@@ -45,10 +49,10 @@ app.post('/submit-design', upload.single('design'), async (req, res) => {
       email,
       phone,
       margin,
-      designFile: data.path, // Save the file path from Supabase
+      designFile: data.path, // Use data.path to get the uploaded file path
     };
 
-    // Optionally, log user data or save it to a database
+    // Log user data (or save to a database if needed)
     console.log('User data saved successfully:', userData);
 
     // Send a response back to the client
