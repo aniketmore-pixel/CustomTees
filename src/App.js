@@ -12,6 +12,7 @@ import women_banner from "./Components/Assets/banner_women.png";
 import kid_banner from "./Components/Assets/banner_kids.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SubmitDesign from "./Pages/SubmitDesign";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             path="/kids"
             element={<ShopCategory banner={kid_banner} category="kid" />}
           />
+          <Route path="/submit-design" element={<SubmitDesign />} />
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>
