@@ -1,7 +1,7 @@
 ## CustomTees - CustomTees – Crafting Personalized Tshirts Application Website
 
 ## Group - 4
-**Mentor** - Dr. Reshma Malik, Faculty, Information Technology
+**Mentor** - Prof. Reshma Malik, Faculty, Information Technology
 
 ### Developer Team:
 
