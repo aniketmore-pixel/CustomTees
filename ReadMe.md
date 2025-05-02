@@ -1,19 +1,74 @@
-## CustomTees - Crafting Personalized Tshirts Application Website
+#👕 **CustomTees - Crafting Personalized Tshirts Web Application**
 
-## Group - 4
+CustomTees is a dynamic and interactive MERN stack web application that empowers users to create and purchase custom-designed T-shirts. It features dedicated dashboards for Customers, Sellers, and Admins, supporting real-time tracking, design previews, and business analytics.
 
-### Developer Team:
+🎥 Watch App Demo
 
-- Aniket More
-- Aarya Arban
-- Digvijaysingh Rajput
+✨ Features
 
-## Documentation:
+👤 Customer Dashboard
 
-[CustomTees - Documentation](https://drive.google.com/file/d/1_hVY6VMyw9j9l7m1flU8lCKww06CicHr/view?usp=sharing)
+Browse ready-made T-shirt designs.
 
-## Website Demo:
+Customize T-shirts in real-time using a 3D model viewer.
 
-https://drive.google.com/file/d/1-ZteFuQo_okSwmlJ2Q_gBynje8lsQSh-/view?usp=drive_link
+Place and track orders with real-time status updates.
 
-### Open 'LogBook.pdf' to view additional project details.
+🎨 Seller Dashboard
+
+Upload personal T-shirt designs.
+
+Monitor individual design performance.
+
+Track order statuses and view sales analytics.
+
+🛠️ Admin Dashboard
+
+View and manage all orders across the platform.
+
+Update order statuses in real time.
+
+Manage users (roles: customer, seller).
+
+Access platform-wide analytics and operations.
+
+📦 Other Highlights
+
+Real-time updates with Socket.IO.
+
+Clean and responsive UI using Tailwind CSS and ShadCN UI.
+
+3D model integration with Three.js.
+
+JWT-based role protection and route guarding.
+
+🛠️ Tech Stack
+
+Frontend:
+
+React.js
+
+Redux Toolkit & RTK Query
+
+Tailwind CSS
+
+ShadCN UI
+
+React Router
+
+Three.js
+
+Cloudinary (image handling)
+
+Backend:
+
+Node.js
+
+Express.js
+
+MongoDB + Mongoose
+
+Socket.IO (real-time communication)
+
+JWT (authentication & role-based access)
+
