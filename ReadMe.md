@@ -74,20 +74,34 @@ JWT (authentication & role-based access)
 
 📂 Folder Structure
 
-customtees/
+CustomTees/
+
 │
+
 ├── client/                 # React frontend
+
 │   ├── src/
+
 │   │   ├── scenes/         # Pages for Customer, Seller, Admin
+
 │   │   ├── components/     # Reusable components
+
 │   │   ├── state/          # Redux Toolkit logic
+
 │   │   └── App.js
+
 │
+
 ├── server/                 # Node/Express backend
+
 │   ├── routes/
+
 │   ├── controllers/
+
 │   ├── models/
+
 │   ├── middleware/
+
 │   └── index.js
 
 🚀 Installation
