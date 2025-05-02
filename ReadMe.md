@@ -1,7 +1,6 @@
 ## CustomTees - Crafting Personalized Tshirts Application Website
 
 ## Group - 4
-**Mentor** - 
 
 ### Developer Team:
 
