@@ -35,7 +35,7 @@ const PORT = 5000;
 // CORS configuration
 app.use(
   cors({
-    origin: "https://cclient-phi.vercel.app", // Allow your frontend origin
+    origin: "https://customtees-rust.vercel.app", // Allow your frontend origin
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
