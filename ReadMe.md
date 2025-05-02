@@ -2,7 +2,7 @@
 
 CustomTees is a dynamic and interactive MERN stack web application that empowers users to create and purchase custom-designed T-shirts. It features dedicated dashboards for Customers, Sellers, and Admins, supporting real-time tracking, design previews, and business analytics.
 
-🎥 Watch App Demo
+## 🎥 [👉 Watch Full Demo](https://drive.google.com/file/d/1-ZteFuQo_okSwmlJ2Q_gBynje8lsQSh-/view?usp=drive_link)
 
 ✨ Features
 
@@ -44,7 +44,7 @@ JWT-based role protection and route guarding.
 
 🛠️ Tech Stack
 
-Frontend:
+**Frontend:**
 
 React.js
 
@@ -60,7 +60,7 @@ Three.js
 
 Cloudinary (image handling)
 
-Backend:
+**Backend:**
 
 Node.js
 
@@ -72,3 +72,64 @@ Socket.IO (real-time communication)
 
 JWT (authentication & role-based access)
 
+📂 Folder Structure
+
+customtees/
+│
+├── client/                 # React frontend
+│   ├── src/
+│   │   ├── scenes/         # Pages for Customer, Seller, Admin
+│   │   ├── components/     # Reusable components
+│   │   ├── state/          # Redux Toolkit logic
+│   │   └── App.js
+│
+├── server/                 # Node/Express backend
+│   ├── routes/
+│   ├── controllers/
+│   ├── models/
+│   ├── middleware/
+│   └── index.js
+
+🚀 Installation
+
+Step 1: Clone the Repository
+
+git clone https://github.com/aniketmore-pixel/CustomTees.git
+
+cd CustomTees
+
+Step 2: Install Backend Dependencies
+
+cd server
+
+npm install
+
+npm start
+
+Step 3: Install Frontend Dependencies
+
+cd client
+
+npm install
+
+npm start
+
+✅ Ensure MongoDB is running locally or use MongoDB Atlas.
+
+🔐 Set up .env files in both client and server with appropriate values for keys like JWT_SECRET, MONGO_URI, etc.
+
+💡 Usage
+
+Register or login as a Customer, Seller, or Admin.
+
+Customers can browse and customize shirts using a 3D model and place orders.
+
+Sellers can upload designs, monitor orders, and view analytics.
+
+Admins can manage users and update order statuses in real-time.
+
+🔐 Admin Access
+
+The Admin Dashboard is protected using JWT and role-based access.
+
+Only authenticated users with the "admin" role in their token payload can access admin routes.
