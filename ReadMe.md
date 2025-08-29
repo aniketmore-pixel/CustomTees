@@ -4,7 +4,7 @@ CustomTees is a dynamic and interactive MERN stack web application that empowers
 
 ## 🎥 [👉 Watch Full Demo](https://drive.google.com/file/d/1-ZteFuQo_okSwmlJ2Q_gBynje8lsQSh-/view?usp=drive_link)
 
-<img width="1920" height="1080" alt="customtees" src="https://github.com/user-attachments/assets/82f8dbce-dcec-4334-8a1a-81089f98144c" />
+<img width="640" height="360" alt="customtees" src="https://github.com/user-attachments/assets/82f8dbce-dcec-4334-8a1a-81089f98144c" />
 
 ✨ Features
 
