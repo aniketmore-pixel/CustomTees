@@ -44,44 +44,44 @@ Demo](https://drive.google.com/file/d/1-ZteFuQo_okSwmlJ2Q_gBynje8lsQSh-/view?usp
 
 ### 👤 Customer Dashboard
 
--   Browse ready-made T-shirt designs.\
--   Customize T-shirts in real time using a **3D model viewer**.\
+-   Browse ready-made T-shirt designs.
+-   Customize T-shirts in real time using a **3D model viewer**.
 -   Place and track orders with **live status updates**.
 
 ### 🎨 Seller Dashboard
 
--   Upload personal T-shirt designs.\
--   Monitor design performance & sales.\
+-   Upload personal T-shirt designs.
+-   Monitor design performance & sales.
 -   Track orders and view analytics.
 
 ### 🛠️ Admin Dashboard
 
--   Manage all orders across the platform.\
--   Update order statuses in real time.\
--   Manage users (**Customer / Seller roles**).\
+-   Manage all orders across the platform.
+-   Update order statuses in real time.
+-   Manage users (**Customer / Seller roles**).
 -   Access **platform-wide analytics**.
 
 ### 📦 Other Highlights
 
--   **Real-time updates** with Socket.IO.\
--   Clean & responsive UI with **Tailwind CSS + ShadCN UI**.\
--   **3D Model integration** with Three.js.\
+-   **Real-time updates** with Socket.IO.
+-   Clean & responsive UI with **Tailwind CSS + ShadCN UI**.
+-   **3D Model integration** with Three.js.
 -   **JWT-based role protection** & route guarding.
 
 ------------------------------------------------------------------------
 
 ## 🛠️ Tech Stack
 
-**Frontend** - React.js\
-- Redux Toolkit & RTK Query\
-- Tailwind CSS + ShadCN UI\
-- React Router\
-- Three.js\
+**Frontend** - React.js
+- Redux Toolkit & RTK Query
+- Tailwind CSS + ShadCN UI
+- React Router
+- Three.j
 - Cloudinary (image handling)
 
-**Backend** - Node.js + Express.js\
-- MongoDB + Mongoose\
-- Socket.IO (real-time communication)\
+**Backend** - Node.js + Express.js
+- MongoDB + Mongoose
+- Socket.IO (real-time communication)
 - JWT (authentication & role-based access)
 
 ------------------------------------------------------------------------
@@ -131,9 +131,9 @@ npm install
 npm start
 ```
 
-✅ Ensure **MongoDB** is running locally or use MongoDB Atlas.\
+✅ Ensure **MongoDB** is running locally or use MongoDB Atlas.
 🔐 Configure `.env` files in both **client** and **server** with keys
-like: - `JWT_SECRET`\
+like: - `JWT_SECRET`
 - `MONGO_URI`
 
 ------------------------------------------------------------------------
@@ -141,8 +141,8 @@ like: - `JWT_SECRET`\
 ## 💡 Usage
 
 -   **Customers** → Browse, customize, and order T-shirts using the **3D
-    model previewer**.\
--   **Sellers** → Upload designs, track orders, and view analytics.\
+    model previewer**.
+-   **Sellers** → Upload designs, track orders, and view analytics.
 -   **Admins** → Manage users, update order statuses, and access
     analytics.
 
@@ -150,7 +150,7 @@ like: - `JWT_SECRET`\
 
 ## 🔐 Admin Access
 
-The Admin Dashboard is **protected using JWT & role-based access**.\
+The Admin Dashboard is **protected using JWT & role-based access**.
 Only authenticated users with the `"admin"` role in their token payload
 can access admin routes.
 
