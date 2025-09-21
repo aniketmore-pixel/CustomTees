@@ -154,13 +154,6 @@ The Admin Dashboard is **protected using JWT & role-based access**.
 Only authenticated users with the `"admin"` role in their token payload
 can access admin routes.
 
-------------------------------------------------------------------------
-
-
-
-## 📝 License
-
-MIT License -- Free to use and modify.
 
 ------------------------------------------------------------------------
 
