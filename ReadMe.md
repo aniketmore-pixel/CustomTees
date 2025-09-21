@@ -1,10 +1,5 @@
-# 👕 CustomTees -- Crafting Personalized T-shirts
-
-CustomTees is a **dynamic MERN stack web application** that empowers
-users to create and purchase **custom-designed T-shirts**.\
-It features dedicated dashboards for **Customers**, **Sellers**, and
-**Admins**, supporting **real-time tracking, design previews, and
-business analytics**.
+# 👕 CustomTees -- Crafting Personalized T-shirts Web Application
+CustomTees is a dynamic and interactive MERN stack web application that empowers users to create and purchase custom-designed T-shirts. It features dedicated dashboards for Customers, Sellers, and Admins, supporting real-time tracking, design previews, and business analytics.
 
 ------------------------------------------------------------------------
 
@@ -13,7 +8,34 @@ business analytics**.
 👉 [Watch Full
 Demo](https://drive.google.com/file/d/1-ZteFuQo_okSwmlJ2Q_gBynje8lsQSh-/view?usp=drive_link)
 
-`<img width="640" height="360" alt="customtees" src="https://github.com/user-attachments/assets/82f8dbce-dcec-4334-8a1a-81089f98144c" />`{=html}
+------------------------------------------------------------------------
+
+## 📸 Screenshots
+
+> Add screenshots of your app here:
+
+-   Homepage
+    ![Customer Dashboard](path/to/screenshot1.png)
+
+-   3D Customisation Tool
+    ![Seller Dashboard](path/to/screenshot2.png)
+
+-   Submit Design page
+    ![Admin Dashboard](path/to/screenshot3.png)
+
+-   Product modal
+    ![Admin Dashboard](path/to/screenshot3.png)
+
+-   Cart
+    ![Admin Dashboard](path/to/screenshot3.png)
+
+-   Products page (Admin)
+    ![Admin Dashboard](path/to/screenshot3.png)
+
+-   Design Submissions (Admin)
+    ![Admin Dashboard](path/to/screenshot3.png)
+
+
 
 ------------------------------------------------------------------------
 
@@ -133,20 +155,7 @@ can access admin routes.
 
 ------------------------------------------------------------------------
 
-## 📸 Screenshots
 
-> Add screenshots of your app here:
-
--   Customer Dashboard\
-    ![Customer Dashboard](path/to/screenshot1.png)
-
--   Seller Dashboard\
-    ![Seller Dashboard](path/to/screenshot2.png)
-
--   Admin Dashboard\
-    ![Admin Dashboard](path/to/screenshot3.png)
-
-------------------------------------------------------------------------
 
 ## 📝 License
 
