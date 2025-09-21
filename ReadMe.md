@@ -1,151 +1,161 @@
-# **CustomTees - Crafting Personalized Tshirts Web Application**
+# 👕 CustomTees -- Crafting Personalized T-shirts
 
-CustomTees is a dynamic and interactive MERN stack web application that empowers users to create and purchase custom-designed T-shirts. It features dedicated dashboards for Customers, Sellers, and Admins, supporting real-time tracking, design previews, and business analytics.
+CustomTees is a **dynamic MERN stack web application** that empowers
+users to create and purchase **custom-designed T-shirts**.\
+It features dedicated dashboards for **Customers**, **Sellers**, and
+**Admins**, supporting **real-time tracking, design previews, and
+business analytics**.
 
-## 🎥 [👉 Watch Full Demo](https://drive.google.com/file/d/1-ZteFuQo_okSwmlJ2Q_gBynje8lsQSh-/view?usp=drive_link)
+------------------------------------------------------------------------
 
-<img width="640" height="360" alt="customtees" src="https://github.com/user-attachments/assets/82f8dbce-dcec-4334-8a1a-81089f98144c" />
+## 🎥 Demo
 
-✨ Features
+👉 [Watch Full
+Demo](https://drive.google.com/file/d/1-ZteFuQo_okSwmlJ2Q_gBynje8lsQSh-/view?usp=drive_link)
 
-👤 Customer Dashboard
+`<img width="640" height="360" alt="customtees" src="https://github.com/user-attachments/assets/82f8dbce-dcec-4334-8a1a-81089f98144c" />`{=html}
 
-Browse ready-made T-shirt designs.
+------------------------------------------------------------------------
 
-Customize T-shirts in real-time using a 3D model viewer.
+## ✨ Features
 
-Place and track orders with real-time status updates.
+### 👤 Customer Dashboard
 
-🎨 Seller Dashboard
+-   Browse ready-made T-shirt designs.\
+-   Customize T-shirts in real time using a **3D model viewer**.\
+-   Place and track orders with **live status updates**.
 
-Upload personal T-shirt designs.
+### 🎨 Seller Dashboard
 
-Monitor individual design performance.
+-   Upload personal T-shirt designs.\
+-   Monitor design performance & sales.\
+-   Track orders and view analytics.
 
-Track order statuses and view sales analytics.
+### 🛠️ Admin Dashboard
 
-🛠️ Admin Dashboard
+-   Manage all orders across the platform.\
+-   Update order statuses in real time.\
+-   Manage users (**Customer / Seller roles**).\
+-   Access **platform-wide analytics**.
 
-View and manage all orders across the platform.
+### 📦 Other Highlights
 
-Update order statuses in real time.
+-   **Real-time updates** with Socket.IO.\
+-   Clean & responsive UI with **Tailwind CSS + ShadCN UI**.\
+-   **3D Model integration** with Three.js.\
+-   **JWT-based role protection** & route guarding.
 
-Manage users (roles: customer, seller).
+------------------------------------------------------------------------
 
-Access platform-wide analytics and operations.
+## 🛠️ Tech Stack
 
-📦 Other Highlights
+**Frontend** - React.js\
+- Redux Toolkit & RTK Query\
+- Tailwind CSS + ShadCN UI\
+- React Router\
+- Three.js\
+- Cloudinary (image handling)
 
-Real-time updates with Socket.IO.
+**Backend** - Node.js + Express.js\
+- MongoDB + Mongoose\
+- Socket.IO (real-time communication)\
+- JWT (authentication & role-based access)
 
-Clean and responsive UI using Tailwind CSS and ShadCN UI.
+------------------------------------------------------------------------
 
-3D model integration with Three.js.
+## 📂 Folder Structure
 
-JWT-based role protection and route guarding.
+    CustomTees/
+    │
+    ├── client/                 # React frontend
+    │   ├── src/
+    │   │   ├── scenes/         # Pages for Customer, Seller, Admin
+    │   │   ├── components/     # Reusable components
+    │   │   ├── state/          # Redux Toolkit logic
+    │   │   └── App.js
+    │
+    ├── server/                 # Node/Express backend
+    │   ├── routes/
+    │   ├── controllers/
+    │   ├── models/
+    │   ├── middleware/
+    │   └── index.js
 
-🛠️ Tech Stack
+------------------------------------------------------------------------
 
-**Frontend:**
+## 🚀 Installation
 
-React.js
+### Step 1: Clone the Repository
 
-Redux Toolkit & RTK Query
-
-Tailwind CSS
-
-ShadCN UI
-
-React Router
-
-Three.js
-
-Cloudinary (image handling)
-
-**Backend:**
-
-Node.js
-
-Express.js
-
-MongoDB + Mongoose
-
-Socket.IO (real-time communication)
-
-JWT (authentication & role-based access)
-
-📂 Folder Structure
-
-CustomTees/
-
-│
-
-├── client/                 # React frontend
-
-│   ├── src/
-
-│   │   ├── scenes/         # Pages for Customer, Seller, Admin
-
-│   │   ├── components/     # Reusable components
-
-│   │   ├── state/          # Redux Toolkit logic
-
-│   │   └── App.js
-
-│
-
-├── server/                 # Node/Express backend
-
-│   ├── routes/
-
-│   ├── controllers/
-
-│   ├── models/
-
-│   ├── middleware/
-
-│   └── index.js
-
-🚀 Installation
-
-Step 1: Clone the Repository
-
+``` bash
 git clone https://github.com/aniketmore-pixel/CustomTees.git
-
 cd CustomTees
+```
 
-Step 2: Install Backend Dependencies
+### Step 2: Backend Setup
 
+``` bash
 cd server
-
 npm install
-
 npm start
+```
 
-Step 3: Install Frontend Dependencies
+### Step 3: Frontend Setup
 
+``` bash
 cd client
-
 npm install
-
 npm start
+```
 
-✅ Ensure MongoDB is running locally or use MongoDB Atlas.
+✅ Ensure **MongoDB** is running locally or use MongoDB Atlas.\
+🔐 Configure `.env` files in both **client** and **server** with keys
+like: - `JWT_SECRET`\
+- `MONGO_URI`
 
-🔐 Set up .env files in both client and server with appropriate values for keys like JWT_SECRET, MONGO_URI, etc.
+------------------------------------------------------------------------
 
-💡 Usage
+## 💡 Usage
 
-Register or login as a Customer, Seller, or Admin.
+-   **Customers** → Browse, customize, and order T-shirts using the **3D
+    model previewer**.\
+-   **Sellers** → Upload designs, track orders, and view analytics.\
+-   **Admins** → Manage users, update order statuses, and access
+    analytics.
 
-Customers can browse and customize shirts using a 3D model and place orders.
+------------------------------------------------------------------------
 
-Sellers can upload designs, monitor orders, and view analytics.
+## 🔐 Admin Access
 
-Admins can manage users and update order statuses in real-time.
+The Admin Dashboard is **protected using JWT & role-based access**.\
+Only authenticated users with the `"admin"` role in their token payload
+can access admin routes.
 
-🔐 Admin Access
+------------------------------------------------------------------------
 
-The Admin Dashboard is protected using JWT and role-based access.
+## 📸 Screenshots
 
-Only authenticated users with the "admin" role in their token payload can access admin routes.
+> Add screenshots of your app here:
+
+-   Customer Dashboard\
+    ![Customer Dashboard](path/to/screenshot1.png)
+
+-   Seller Dashboard\
+    ![Seller Dashboard](path/to/screenshot2.png)
+
+-   Admin Dashboard\
+    ![Admin Dashboard](path/to/screenshot3.png)
+
+------------------------------------------------------------------------
+
+## 📝 License
+
+MIT License -- Free to use and modify.
+
+------------------------------------------------------------------------
+
+## 👨‍💻 Authors
+- Aarya Arban
+- Aniket More
+- Digvijaysingh Rajput
+- Jatin Ghind
