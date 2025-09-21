@@ -1,4 +1,4 @@
-# 👕 CustomTees -- Crafting Personalized T-shirts Web Application
+# 👕 CustomTees - Crafting Personalized T-shirts Web Application
 CustomTees is a dynamic and interactive MERN stack web application that empowers users to create and purchase custom-designed T-shirts. It features dedicated dashboards for Customers, Sellers, and Admins, supporting real-time tracking, design previews, and business analytics.
 
 ------------------------------------------------------------------------
