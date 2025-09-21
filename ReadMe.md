@@ -15,7 +15,7 @@ Demo](https://drive.google.com/file/d/1-ZteFuQo_okSwmlJ2Q_gBynje8lsQSh-/view?usp
     <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/ca3bf009-524c-4873-b1c7-89b6c94d2eae" />
   
 -   3D Customisation Tool
-    <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/7e110f29-6e19-44b8-a954-dd0a70e16c9c" />
+    <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/050792f3-79b6-4c38-846a-3a3bff447199" />
 
 -   Submit Design page
     <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/beb1635c-c9e6-454b-b75d-0ad89776d17b" />
