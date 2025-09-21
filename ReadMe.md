@@ -12,25 +12,29 @@ Demo](https://drive.google.com/file/d/1-ZteFuQo_okSwmlJ2Q_gBynje8lsQSh-/view?usp
 
 ## 📸 Screenshots
 -   Homepage
-      
-
+    <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/ca3bf009-524c-4873-b1c7-89b6c94d2eae" />
+  
 -   3D Customisation Tool
-    ![Seller Dashboard](path/to/screenshot2.png)
+    <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/7e110f29-6e19-44b8-a954-dd0a70e16c9c" />
 
 -   Submit Design page
-    ![Admin Dashboard](path/to/screenshot3.png)
+    <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/beb1635c-c9e6-454b-b75d-0ad89776d17b" />
 
 -   Product modal
-    ![Admin Dashboard](path/to/screenshot3.png)
+    <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/c046067b-c4a6-4674-a931-7ed78110e230" />
 
--   Cart
-    ![Admin Dashboard](path/to/screenshot3.png)
+-   Cart & Checkout
+    <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/3353f86e-2286-41ce-848d-bfc88c7c628c" />
 
 -   Products page (Admin)
-    ![Admin Dashboard](path/to/screenshot3.png)
+    <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/82a48c61-7c6e-4421-a19e-69dd7ffdbb90" />
+
+-   Orders page (Admin)
+    <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/43a5719d-5037-4e31-bb07-7a1feeea0ae6" />
 
 -   Design Submissions (Admin)
-    ![Admin Dashboard](path/to/screenshot3.png)
+    <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/f9927c75-5c66-44db-92c0-f6a51a46abac" />
+
 
 
 
