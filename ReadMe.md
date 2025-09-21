@@ -11,11 +11,8 @@ Demo](https://drive.google.com/file/d/1-ZteFuQo_okSwmlJ2Q_gBynje8lsQSh-/view?usp
 ------------------------------------------------------------------------
 
 ## 📸 Screenshots
-
-> Add screenshots of your app here:
-
--   Homepage
-    ![Customer Dashboard](path/to/screenshot1.png)
+> -   Homepage
+      ![Customer Dashboard](path/to/screenshot1.png)
 
 -   3D Customisation Tool
     ![Seller Dashboard](path/to/screenshot2.png)
